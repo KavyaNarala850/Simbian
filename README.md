@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Simbian Security Comparison UI
 
-## Getting Started
+This interactive UI simulates how security alerts are handled with and without Simbian. The project highlights the real-time difference in alert processing, showing increased false positives and active threats without automation—and zero threats with Simbian in action.
 
-First, run the development server:
+### 🎬 Thought Process
+
+The component is split into two sections for clarity: "Without Simbian" (where metrics update in real-time using `setInterval`) and "With Simbian" (with clean summaries and a logical flow using motion animations). I aimed to present a visual storytelling experience that mirrors a real-world SOC (Security Operations Center) dashboard.
+
+### ✨ Libraries Used
+
+- **Framer Motion** for rich animations and transitions.
+- **Lucide React** for consistent, minimal iconography.
+- **Tailwind CSS** (if used) or custom styles for responsiveness.
+
+### 🛠️ Known Issues / Improvements
+
+- Alerts continue updating even when not visible—I'd optimize using `IntersectionObserver` or pause `setInterval` when off-screen.
+- Would enhance accessibility and responsiveness on smaller screens.
+- Could integrate live data via WebSockets or a backend service.
+
+---
+
+### 🚀 Deployment
+
+Live Link :https://github.com/KavyaNarala850/Simbian.git
+
+To run locally:
 
 ```bash
+git clone https://github.com/YOUR_USERNAME/with-simbian.git
+cd simbian
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
